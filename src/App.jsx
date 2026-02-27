@@ -17,7 +17,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("https://toneshift-backend.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -94,7 +94,7 @@ function Dashboard() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/ai/rewrite", {
+      const response = await fetch("https://toneshift-backend.onrender.com/ai/rewrite", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
