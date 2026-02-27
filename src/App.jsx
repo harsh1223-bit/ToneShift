@@ -6,7 +6,7 @@ import {
   Navigate,
   useNavigate,
 } from "react-router-dom";
-
+console.log("PRODUCTION BUILD CONFIRMED");
 /* ===================== LOGIN ===================== */
 
 function Login() {
