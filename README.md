@@ -1,16 +1,88 @@
-# React + Vite
+# 🎨 ToneShift Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ToneShift Web is the frontend interface for ToneShift AI.  
+It allows users to securely log in and rewrite professional emails using AI-powered tone transformation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌍 Live Application
 
-## React Compiler
+Frontend:  
+https://toneshift-web.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Backend API:  
+https://toneshift-backend.onrender.com
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- React (Vite)
+- Fetch API
+- JWT Authentication (LocalStorage)
+- Vercel Deployment
+
+---
+
+## 🔐 Authentication Flow
+
+1. User logs in via backend
+2. Backend returns JWT
+3. JWT is stored in localStorage
+4. Protected requests include:
+
+```
+Authorization: Bearer <token>
+```
+
+---
+
+## ⚙️ Local Setup
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/your-username/toneshift-web.git
+cd toneshift-web
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Add Environment Variable
+Create a `.env` file:
+
+```
+VITE_API_URL=http://localhost:8080
+```
+
+### 4. Start Development Server
+```bash
+npm run dev
+```
+
+---
+
+## 🚀 Deployment
+
+Frontend deployed via Vercel.
+
+Production Environment Variable:
+
+```
+VITE_API_URL=https://toneshift-backend.onrender.com
+```
+
+---
+
+## 🧠 Architecture
+
+Client → Vercel → Render Backend → PostgreSQL → OpenRouter API
+
+---
+
+## 👨‍💻 Author
+
+Harsh Sharma  
+Full-Stack Java Developer | Spring Boot | React | Cloud Deployment
